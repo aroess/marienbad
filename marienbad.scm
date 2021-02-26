@@ -9,8 +9,8 @@
 ;; Die beiden Spieler nehmen abwechselnd Streichhölzer aus einer der
 ;; Reihen weg. Bei einem Zug dürfen nur Streichhölzer aus einer
 ;; einzigen Reihe entfernt werden; es ist jedoch der Entscheidung des
-;; Spielers überlassen, wie viele: mindestens eines, höchstens alle.
-;; Der Spieler, der das letzte Streichholz wegnehmen muss, verliert.
+;; Spielers überlassen wie viele: mindestens eines, höchstens alle.
+;; Der Spieler, der das letzte Streichholz wegnehmen muss verliert.
 ;; Im Folgenden wird das Miserè-Spiel rein funktional in Scheme nach
 ;; R5RS implementiert.
 
@@ -66,7 +66,7 @@
      field)))
 
 ;; Funktion zur Überprüfung eines Zuges. Man soll nicht mehr
-;; Streichhölzer entnehmen können, als in der jeweiligen Reihe
+;; Streichhölzer entnehmen können als in der jeweiligen Reihe
 ;; vorhanden sind. Außerdem muss der Wert für die zu bearbeitende
 ;; Reihe ein Integer im entsprechenden Intervall [0, Spielfeldhöhe]
 ;; sein.
@@ -338,7 +338,7 @@
         new-field
         (computer-move field (cdr moves)))))
 
-;; Der Computer nimmt aus derjenigen Reihe, in der mehr als ein
+;; Der Computer nimmt aus derjenigen Reihe in der mehr als ein
 ;; Streichholz liegt, entweder alle Streichhölzer, oder alle bis auf
 ;; eines. Er trifft die Entscheidung so, dass nach seinem Zug eine
 ;; ungerade Anzahl von Reihen mit je einem Streichholz verbleibt.
